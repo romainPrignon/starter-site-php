@@ -18,7 +18,7 @@ bower install
 ```
 time for coffee... :)
 
-## Usage
+## Usage 
 
 Acme me
 
