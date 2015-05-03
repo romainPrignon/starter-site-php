@@ -1,0 +1,12 @@
+{
+  "name": "starter-symfony-front",
+  "version": "0.0.0",
+  "authors": [
+    "Romain Prignon <pro.rprignon@gmail.com>"
+  ],
+  "description": "starter for symfony front project",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "latest"
+  }
+}

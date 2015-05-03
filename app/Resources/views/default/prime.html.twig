@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="prime" class="dn">
+        {% if isPrime %}
+            <div class="text-success">{{ isPrime }}</div>
+        {% else %}
+            <div class="text-danger">It is not prime :(</div>
+        {% endif %}
+    </div>
+{% endblock %}
