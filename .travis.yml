@@ -16,6 +16,8 @@ env:
 cache:
   directories:
     - vendor/
+    - node_modules/
+    - app/Resources/bower_components/
 
 matrix:
   allow_failures:

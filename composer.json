@@ -41,6 +41,7 @@
         "checkstyle": "phpcs --standard=Symfony2 src/",
         "format": "php-cs-fixer fix --level=symfony src/",
         "installhooks": "rm -rf .git/hooks/ && cp -a scripts/git_hooks/ .git/hooks/",
+        "installstandard": "phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard",
         "precommit": "composer checkerror && composer format && composer checkstyle && composer test",
         "post-root-package-install": [
             "SymfonyStandard\\Composer::hookRootPackageInstall"
@@ -54,7 +55,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
 
-            "./bin/phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard"
+            "composer installstandard"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -65,7 +66,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
 
-            "./bin/phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard"
+            "composer installstandard"
         ]
     },
     "config": {

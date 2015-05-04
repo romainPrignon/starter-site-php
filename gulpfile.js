@@ -6,6 +6,8 @@ var uglifycss = require('gulp-uglifycss');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 
+// var rev = require('gulp-rev');
+
 gulp.task('build:scripts', function () {
   return gulp.src([
     'app/Resources/bower_components/jquery/dist/jquery.js',
