@@ -5,10 +5,14 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * DefaultController
+ */
 class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     * @return Response
      */
     public function indexAction()
     {
@@ -17,6 +21,9 @@ class DefaultController extends Controller
 
     /**
      * @Route("/is-prime/{number}", name="isprime")
+     * @param int $number
+     *
+     * @return Response
      */
     public function primeAction($number)
     {

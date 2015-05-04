@@ -4,8 +4,14 @@ namespace AppBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
+/**
+ * DefaultControllerTest
+ */
 class DefaultControllerTest extends WebTestCase
 {
+    /**
+     * testIndex
+     */
     public function testIndex()
     {
         $client = static::createClient();
@@ -16,6 +22,9 @@ class DefaultControllerTest extends WebTestCase
         $this->assertTrue($crawler->filter('html:contains("Homepage")')->count() > 0);
     }
 
+    /**
+     * testPrime
+     */
     public function testPrime()
     {
         $client = static::createClient();
