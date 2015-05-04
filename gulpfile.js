@@ -11,6 +11,7 @@ gulp.task('build:scripts', function () {
     'app/Resources/bower_components/jquery/dist/jquery.js',
     'app/Resources/bower_components/bootstrap/dist/js/bootstrap.js',
     'app/Resources/assets/js/**/*.js'])
+    .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
@@ -21,6 +22,7 @@ gulp.task('build:styles', function () {
   return gulp.src([
     'app/Resources/bower_components/bootstrap/dist/css/bootstrap.css',
     'app/Resources/assets/css/**/*.css'])
+    .pipe(sourcemaps.init())
     .pipe(concat('styles.css'))
     .pipe(uglifycss())
     .pipe(sourcemaps.write('./'))
