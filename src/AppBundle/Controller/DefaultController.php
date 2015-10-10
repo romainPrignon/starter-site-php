@@ -16,7 +16,9 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return phpinfo();
+        phpinfo();
+
+        return $this->render('default/index.html.twig');
     }
 
     /**
@@ -35,14 +37,13 @@ class DefaultController extends Controller
             'isPrime' => $isPrime,
         ));
     }
-    
+
     /**
      * @Route("/throw/{number}", name="throw_exception")
      * @param int $number
      *
-     * @Throw HttpException
      */
-    public function ExceptionAction($number)
+    public function exceptionAction($number)
     {
         throw new \Symfony\Component\HttpKernel\Exception\HttpException($number, 'This is an exception');
     }

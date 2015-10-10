@@ -14,3 +14,4 @@
 node_modules/
 app/Resources/bower_components/
 build/
+npm-debug.log
