@@ -1,4 +1,4 @@
-# starter-symfony-front [![Build Status](https://travis-ci.org/romainPrignon/starter-symfony-front.svg?branch=master)](https://travis-ci.org/romainPrignon/starter-symfony-front)
+# starter-symfony-front [![Build Status](https://travis-ci.org/romainPrignon/starter-symfony-front.svg?branch=master)](https://travis-ci.org/romainPrignon/starter-symfony-front)[![Code Climate](https://codeclimate.com/github/romainPrignon/starter-symfony-front/badges/gpa.svg)](https://codeclimate.com/github/romainPrignon/starter-symfony-front)
 
 starter for symfony frontend app
 
