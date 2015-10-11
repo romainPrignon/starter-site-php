@@ -10,19 +10,18 @@
         }
     },
     "require": {
-        "php": ">=5.3.3",
-        "symfony/symfony": "~2.7@beta",
-        "doctrine/orm": "~2.2,>=2.2.3,<2.5",
-        "doctrine/dbal": "<2.5",
-        "doctrine/doctrine-bundle": "~1.2",
+        "php": ">=5.3.9",
+        "symfony/symfony": "~2.7.0",
+        "doctrine/orm": "^2.4.0",
+        "doctrine/doctrine-bundle": "~1.5.0",
         "twig/extensions": "~1.0",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~3.0,>=3.0.12",
-        "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0",
+        "sensio/distribution-bundle": "~4.0.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "~2.0.0",
 
-        "romainprignon/starter-php-component": "~0.1"
+        "romainprignon/starter-php-component": "~0.1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
@@ -43,7 +42,7 @@
         "installhooks": "rm -rf .git/hooks/ && cp -a scripts/git_hooks/ .git/hooks/",
         "installstandard": "phpcs --config-set installed_paths vendor/escapestudios/symfony2-coding-standard",
         "precommit": "composer checkerror && composer format && composer checkstyle && composer test",
-        "initialize": "composer install && npm install && npm run bower install -- --allow-root && npm run task build",
+        "initialize": "composer install -vvv && npm install && npm run bower install -- --allow-root && npm run task build",
         "start": "php app/console server:run 0.0.0.0:80 --env=$env",
         "post-root-package-install": [
             "SymfonyStandard\\Composer::hookRootPackageInstall"
