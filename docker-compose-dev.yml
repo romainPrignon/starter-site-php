@@ -1,0 +1,15 @@
+site-dev-build:
+  build: .
+  environment:
+    - env=dev
+
+site-dev-run:
+  image: "romainprignon/starter-symfony-front"
+  ports:
+    - "8000:80"
+  volumes:
+    - .:/usr/src/app
+  environment:
+    - env=dev
+  stdin_open: true
+  tty: true

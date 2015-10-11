@@ -1,0 +1,12 @@
+site-prod-build:
+  build: .
+  environment:
+    - env=prod
+
+site-prod-run:
+  image: "romainprignon/starter-symfony-front"
+  ports:
+    - "80:80"
+  environment:
+    - env=prod
+  restart: always

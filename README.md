@@ -27,13 +27,24 @@ composer run-script start
 
 You should use docker instead of local development
 
+### build dev
+```sh
+docker-compose -f docker-compose-dev.yml build site-dev-build
+```
+
+### build prod
+```sh
+docker-compose -f docker-compose-prod.yml build site-prod-build
+```
+
 ### run dev
 ```sh
-docker run -it -p 8000:80 -e "env=dev" -v $(pwd):/usr/src/app --name starter-symfony-front romainprignon/starter-symfony-front
+docker-compose -f docker-compose-dev.yml up site-dev-run
 ```
+
 ### run prod
 ```sh
-docker run -p 80:80 -e "env=prod" --name starter-symfony-front romainprignon/starter-symfony-front
+docker-compose -f docker-compose-prod.yml up site-prod-run
 ```
 
 
