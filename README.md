@@ -3,6 +3,7 @@
 starter for symfony frontend app
 
 
+
 ## Installation
 
 ```sh
