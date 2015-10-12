@@ -8,7 +8,7 @@ EXPOSE 80
 CMD composer run-script start
 
 # install dependencies
-RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 # TODO: fix node version
 RUN apt-get install -y --force-yes nodejs
 
