@@ -13,14 +13,15 @@ install:
   - docker-compose -f docker-compose-prod.yml up -d site-prod-build
 
 script:
-  - composer checkerror
-  - composer checkstyle
-  - composer test
+  - docker-compose run site-prod-build composer checkerror
+  - docker-compose run site-prod-build composer checkstyle
+  - docker-compose run site-prod-build composer test
 
-addons:
-  code_climate:
-    repo_token: 0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef
+#addons:
+#  code_climate:
+#    repo_token: 0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef
 
 after_script:
-  - CODECLIMATE_REPO_TOKEN="0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef" bin/test-reporter --stdout > codeclimate.json
-  - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
+  - docker-compose stop
+#  - CODECLIMATE_REPO_TOKEN="0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef" bin/test-reporter --stdout > codeclimate.json
+#  - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
