@@ -22,8 +22,13 @@ time for coffee... :)
 ## Usage
 
 ```sh
+set env=dev
 composer run-script start
 ```
+
+
+## environment variable
+env => dev || test || prod
 
 
 ## Docker
