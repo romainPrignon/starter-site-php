@@ -1,9 +1,4 @@
-site-dev-build:
-  build: .
-  environment:
-    - env=dev
-
-site-dev-run:
+site:
   image: "romainprignon/starter-symfony-front"
   ports:
     - "8000:80"
