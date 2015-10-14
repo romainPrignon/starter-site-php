@@ -1,9 +1,9 @@
-site-prod-build:
+site-from_build:
   build: .
   environment:
     - env=prod
 
-site-prod-run:
+site-from_run:
   image: "romainprignon/starter-symfony-front"
   ports:
     - "80:80"
