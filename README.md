@@ -5,6 +5,10 @@
 starter for symfony frontend app
 
 
+# TODO
+
+ * Actuellement, chaque partner fait son propre build docker. A terme => par par le hub et lancer des hook avec le tag associé
+
 
 ## Installation
 

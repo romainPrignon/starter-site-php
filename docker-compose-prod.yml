@@ -1,5 +1,5 @@
 site:
-  image: "romainprignon/starter-symfony-front"
+  build: .
   ports:
     - "80:80"
   environment:
