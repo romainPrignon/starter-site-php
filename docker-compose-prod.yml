@@ -1,10 +1,4 @@
-site-from_src:
-  build: .
-  environment:
-    - env=prod
-  restart: always
-
-site-from_dist:
+site:
   image: "romainprignon/starter-symfony-front"
   ports:
     - "80:80"
