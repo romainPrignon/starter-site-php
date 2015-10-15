@@ -5,6 +5,10 @@
 starter for symfony frontend app
 
 
+# TODO
+
+ * Actuellement, chaque partner fait son propre build docker. A terme => par par le hub et lancer des hook avec le tag associé
+
 
 ## Installation
 
@@ -35,24 +39,14 @@ env => dev || test || prod
 
 You should use docker instead of local development
 
-### build dev
+### dev
 ```sh
-docker-compose -f docker-compose-dev.yml build site-dev-build
+$ docker-compose -f docker-compose-dev.yml up (-d)
 ```
 
-### build prod
+### prod
 ```sh
-docker-compose -f docker-compose-prod.yml build site-prod-build
-```
-
-### run dev
-```sh
-docker-compose -f docker-compose-dev.yml up site-dev-run
-```
-
-### run prod
-```sh
-docker-compose -f docker-compose-prod.yml up site-prod-run
+docker-compose -f docker-compose-prod.yml up -d
 ```
 
 

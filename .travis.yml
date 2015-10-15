@@ -1,48 +1,17 @@
-language: php
+sudo: required
 
-php:
-  - 5.4
-  - 5.5
-  - 5.6
-  - 7.0
-
-sudo: false
-
-env:
-  global:
-    - PATH=$PATH:./bin
-
-cache:
-  directories:
-    - bin/
-    - vendor/
-    - node_modules/
-    - app/Resources/bower_components/
-
-matrix:
-  fast_finish: true
-
-addons:
-  code_climate:
-    repo_token: 0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef
+services:
+  - docker
 
 before_install:
-  - composer self-update
-  - npm install -g npm
+  - curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
 
 install:
-  - composer install
-  - npm install
-  - npm run bower install
-
-before_script:
-  - npm run task build
+  - docker-compose -f docker-compose-prod.yml up -d
 
 script:
-  - composer checkerror
-  - composer checkstyle
-  - composer test
-
-after_script:
-  - CODECLIMATE_REPO_TOKEN="0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef" bin/test-reporter --stdout > codeclimate.json
-  - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
+  - docker-compose -f docker-compose-prod.yml run site composer checkerror
+  - docker-compose -f docker-compose-prod.yml run site composer checkstyle
+  - docker-compose -f docker-compose-prod.yml run site composer test
