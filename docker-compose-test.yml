@@ -1,0 +1,8 @@
+site:
+  build: .
+  ports:
+    - "80:80"
+  environment:
+    - env=test
+    - SYMFONY_ENV=test
+  restart: always

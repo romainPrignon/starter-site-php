@@ -44,6 +44,11 @@ You should use docker instead of local development
 $ docker-compose -f docker-compose-dev.yml up (-d)
 ```
 
+### test
+```sh
+$ docker-compose -f docker-compose-test.yml up -d
+```
+
 ### prod
 ```sh
 docker-compose -f docker-compose-prod.yml up -d
