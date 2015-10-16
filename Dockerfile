@@ -1,8 +1,5 @@
 FROM romainprignon/php-cli-base:5.6.14
 
-ENV env prod
-ENV SYMFONY_ENV prod
-
 WORKDIR /usr/src/app
 EXPOSE 80
 
