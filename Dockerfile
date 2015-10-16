@@ -25,7 +25,7 @@ RUN composer run-script initialize
 # docker push romainprignon/starter-symfony-front
 
 # run dev
-# docker run -it -p 8000:80 -e "env=dev" -v $(pwd):/usr/src/app --name starter-symfony-front romainprignon/starter-symfony-front
+# docker run -it -p 8000:80 -e "env=dev" -e "SYMFONY_ENV=dev" -v $(pwd):/usr/src/app --name starter-symfony-front romainprignon/starter-symfony-front
 
 # run prod
-# docker run -p 80:80 -e "env=prod" --name starter-symfony-front romainprignon/starter-symfony-front
+# docker run -p 80:80 -e "env=prod" -e "SYMFONY_ENV=prod" --name starter-symfony-front romainprignon/starter-symfony-front

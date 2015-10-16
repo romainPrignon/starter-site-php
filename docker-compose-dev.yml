@@ -6,5 +6,6 @@ site:
     - .:/usr/src/app
   environment:
     - env=dev
+    - SYMFONY_ENV=dev
   stdin_open: true
   tty: true

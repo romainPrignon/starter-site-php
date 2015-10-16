@@ -4,4 +4,5 @@ site:
     - "80:80"
   environment:
     - env=prod
+    - SYMFONY_ENV=prod
   restart: always
