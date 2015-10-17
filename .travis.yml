@@ -3,15 +3,11 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-
 install:
-  - docker-compose -f docker-compose-test.yml up -d
+  - docker build -t romainprignon/starter-symfony-front .
+  - docker run -p 80:80 -e "env=test" -e "SYMFONY_ENV=test" romainprignon/starter-symfony-front
 
 script:
-  - docker-compose -f docker-compose-test.yml run site composer checkerror
-  - docker-compose -f docker-compose-test.yml run site composer checkstyle
-  - docker-compose -f docker-compose-test.yml run site composer test
+  - composer run-script checkerror
+  - composer run-script checkstyle
+  - composer run-script test
