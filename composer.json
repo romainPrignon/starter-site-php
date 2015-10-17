@@ -36,6 +36,7 @@
     },
     "scripts": {
         "test": "phpunit",
+        "sendcoverage": "scripts/sendcoverage.sh",
         "checkerror": "parallel-lint src/ && phpmd src/ text rulesets.xml",
         "checkstyle": "phpcs --standard=Symfony2 src/",
         "format": "php-cs-fixer fix --level=symfony src/",

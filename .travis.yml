@@ -3,6 +3,10 @@ sudo: required
 services:
   - docker
 
+addons:
+  code_climate:
+    repo_token: 0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef
+
 before_install:
   - curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
@@ -11,8 +15,8 @@ before_install:
 install:
   - docker-compose -f docker-compose-test.yml build
 
-before_script:
-  - docker-compose -f docker-compose-test.yml run site composer initialize
-
 script:
-  - docker-compose -f docker-compose-test.yml run site composer test
+  - docker-compose -f docker-compose-test.yml run site composer run-script initialize && composer run-script test
+
+after_script:
+  - docker-compose -f docker-compose-test.yml run site composer run-script sendcoverage
