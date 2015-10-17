@@ -1,20 +1,26 @@
 language: php
 
-sudo: required
+php:
+  - 5.6
+  - 7.0
 
-services:
-  - docker
+before_install:
+  - composer self-update
+  - sudo npm install -g npm
 
 install:
-  - docker build -t romainprignon/starter-symfony-front .
-  - docker run -d -p 80:80 -e "env=test" -e "SYMFONY_ENV=test" romainprignon/starter-symfony-front
+  - composer install
+  - npm install
+  - npm run bower install
+
+before_script:
+  - npm run task build
 
 script:
-  - composer run-script checkerror
-  - composer run-script checkstyle
-  - composer run-script test
+  - composer checkerror
+  - composer checkstyle
+  - composer test
 
 after_script:
   - CODECLIMATE_REPO_TOKEN="0a81f1b6d6362d175831b791e749725a3bc76c8f0b7455fc6d787cae8ef622ef" bin/test-reporter --stdout > codeclimate.json
   - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
-
