@@ -1,10 +1,10 @@
 {
-  "name": "starter-symfony-front",
+  "name": "starter-site-php",
   "version": "0.0.0",
   "authors": [
     "Romain Prignon <pro.rprignon@gmail.com>"
   ],
-  "description": "starter for symfony front project",
+  "description": "starter for php front project",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "latest"

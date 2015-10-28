@@ -21,16 +21,16 @@ COPY . /usr/src/app
 ################################################################
 
 # build
-# docker build -t romainprignon/starter-symfony-front .
+# docker build -t romainprignon/starter-site-php .
 
 # push
-# docker push romainprignon/starter-symfony-front
+# docker push romainprignon/starter-site-php
 
 # run dev
-# docker run -it -p 8000:80 -e "env=dev" -e "SYMFONY_ENV=dev" -v $(pwd):/usr/src/app --name starter-symfony-front romainprignon/starter-symfony-front
+# docker run -it -p 8000:80 -e "env=dev" -e "SYMFONY_ENV=dev" -v $(pwd):/usr/src/app --name starter-site-php romainprignon/starter-site-php
 
 # run test
-# docker run -p 80:80 -e "env=test" -e "SYMFONY_ENV=test" romainprignon/starter-symfony-front
+# docker run -p 80:80 -e "env=test" -e "SYMFONY_ENV=test" romainprignon/starter-site-php
 
 # run prod
-# docker run -p 80:80 -e "env=prod" -e "SYMFONY_ENV=prod" --name starter-symfony-front romainprignon/starter-symfony-front
+# docker run -p 80:80 -e "env=prod" -e "SYMFONY_ENV=prod" --name starter-site-php romainprignon/starter-site-php

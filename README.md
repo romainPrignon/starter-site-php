@@ -1,6 +1,6 @@
-# starter-symfony-front
+# starter-site-php
 
-[![Build Status](https://travis-ci.org/romainPrignon/starter-symfony-front.svg?branch=master)](https://travis-ci.org/romainPrignon/starter-symfony-front)  [![Code Climate](https://codeclimate.com/github/romainPrignon/starter-symfony-front/badges/gpa.svg)](https://codeclimate.com/github/romainPrignon/starter-symfony-front)  [![Test Coverage](https://codeclimate.com/github/romainPrignon/starter-symfony-front/badges/coverage.svg)](https://codeclimate.com/github/romainPrignon/starter-symfony-front/coverage)  [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3d1b1d81-92ca-4043-ad74-f6cc5e2ee6c7/mini.png)](https://insight.sensiolabs.com/projects/3d1b1d81-92ca-4043-ad74-f6cc5e2ee6c7)
+[![Build Status](https://travis-ci.org/romainPrignon/starter-site-php.svg?branch=master)](https://travis-ci.org/romainPrignon/starter-site-php)  [![Code Climate](https://codeclimate.com/github/romainPrignon/starter-site-php/badges/gpa.svg)](https://codeclimate.com/github/romainPrignon/starter-site-php)  [![Test Coverage](https://codeclimate.com/github/romainPrignon/starter-site-php/badges/coverage.svg)](https://codeclimate.com/github/romainPrignon/starter-site-php/coverage)  [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3d1b1d81-92ca-4043-ad74-f6cc5e2ee6c7/mini.png)](https://insight.sensiolabs.com/projects/3d1b1d81-92ca-4043-ad74-f6cc5e2ee6c7)
 
 starter for symfony frontend app
 
@@ -13,8 +13,8 @@ starter for symfony frontend app
 ## Installation
 
 ```sh
-git clone https://github.com/romainprignon/starter-symfony-front.git
-cd starter-symfony-front
+git clone https://github.com/romainprignon/starter-site-php.git
+cd starter-site-php
 rm -rf .git
 git init
 git remote add origin <repo_url>

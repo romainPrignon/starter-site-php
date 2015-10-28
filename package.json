@@ -1,7 +1,7 @@
 {
-  "name": "starter-symfony-front",
+  "name": "starter-site-php",
   "version": "0.0.0",
-  "description": "starter for a symfony front project",
+  "description": "starter for a front project in php",
   "main": "index.js",
   "directories": {
     "doc": "doc"

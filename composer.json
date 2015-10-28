@@ -1,6 +1,6 @@
 {
-    "name": "romainprignon/starter-symfony-front",
-    "description": "starter symfony project for front dev",
+    "name": "romainprignon/starter-site-php",
+    "description": "starter in php for front dev",
     "license": "MIT",
     "type": "project",
     "autoload": {
@@ -83,7 +83,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/romainPrignon/starter-php-component.git"
+            "url": "https://github.com/romainPrignon/starter-package-php.git"
         }
     ]
 }

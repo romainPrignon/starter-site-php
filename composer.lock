@@ -984,16 +984,16 @@
             "time": "2012-12-21 11:40:51"
         },
         {
-            "name": "romainprignon/starter-php-component",
+            "name": "romainprignon/starter-site-php",
             "version": "0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/romainPrignon/starter-php-component.git",
+                "url": "https://github.com/romainPrignon/starter-site-php.git",
                 "reference": "91fef8e45c68902cc0eb7b9598ce837c98a766ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/romainPrignon/starter-php-component/zipball/91fef8e45c68902cc0eb7b9598ce837c98a766ec",
+                "url": "https://api.github.com/repos/romainPrignon/starter-site-php/zipball/91fef8e45c68902cc0eb7b9598ce837c98a766ec",
                 "reference": "91fef8e45c68902cc0eb7b9598ce837c98a766ec",
                 "shasum": ""
             },
@@ -1056,8 +1056,8 @@
             ],
             "description": "starter project for standard php component",
             "support": {
-                "source": "https://github.com/romainPrignon/starter-php-component/tree/0.1.0",
-                "issues": "https://github.com/romainPrignon/starter-php-component/issues"
+                "source": "https://github.com/romainPrignon/starter-site-php/tree/0.1.0",
+                "issues": "https://github.com/romainPrignon/starter-site-php/issues"
             },
             "time": "2015-04-30 20:02:11"
         },
