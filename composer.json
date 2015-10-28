@@ -21,7 +21,7 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0.0",
 
-        "romainprignon/starter-php-component": "~0.1.0"
+        "romainprignon/starter-package-php": "~0.1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
